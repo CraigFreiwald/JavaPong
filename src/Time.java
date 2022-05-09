@@ -1,3 +1,5 @@
+
+//Class for accessing Java NanoTime feature
 public class Time {
     public static double timeStarted = System.nanoTime();
 
