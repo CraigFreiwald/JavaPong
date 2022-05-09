@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
+//This class is the game window
 public class Window extends JFrame implements Runnable{
 
     Graphics2D g2;
