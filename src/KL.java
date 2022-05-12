@@ -1,9 +1,11 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+//this class is used to add key listeners in the game window
 public class KL implements KeyListener{
 
-    private boolean[] keyPressed = new boolean[128];
+    //128 possible keys can typically be pressed by user
+    private final boolean[] keyPressed = new boolean[128];
 
     @Override
     public void keyTyped(KeyEvent e) {
