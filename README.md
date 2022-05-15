@@ -1,1 +1,2 @@
-# JavaPong is a 2d Java Pong game using Java Swing
+**IN PROGRESS** 
+JavaPong is a 2d Java Pong game using Java Swing
