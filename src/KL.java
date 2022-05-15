@@ -25,4 +25,4 @@ public class KL implements KeyListener{
     public boolean isKeyPressed(int keyCode) {
         return keyPressed[keyCode];
     }
-}
+}//end of class

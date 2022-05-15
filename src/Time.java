@@ -6,4 +6,4 @@ public class Time {
     public static double getTime() {
         return (System.nanoTime() - timeStarted) * 1E-9;
     }
-}
+}//end of class

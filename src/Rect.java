@@ -1,13 +1,12 @@
 import java.awt.*;
+import java.awt.geom.Rectangle2D;
+
 //this class creates rectangle objects for use in the game (paddles and balls)
 public class Rect {
-    private final int x;
-    private final int y;
-    private final int width;
-    private final int height;
-    private final Color color;
+    public double x, y, width, height;
+    public Color color;
 
-    public Rect(int x, int y, int width, int height, Color color) {
+    public Rect(double x, double y, double width, double height, Color color) {
         this.x = x;
         this.y = y;
         this.width = width;
@@ -18,6 +17,7 @@ public class Rect {
     //this method draws the rectangle on the screen
     public void draw(Graphics2D g2) {
         g2.setColor(color);
-        g2.fillRect(x, y, width, height);
+        g2.fill(new Rectangle2D.Double(x, y, width, height));
+
     }
-}
+}//end of class

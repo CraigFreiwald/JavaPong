@@ -6,4 +6,4 @@ public class Main {
         Thread t1 = new Thread(window);
         t1.start();
     }
-}
+} //end of class
