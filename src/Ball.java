@@ -4,7 +4,7 @@ public class Ball {
     public Rect leftPaddle, rightPaddle;
 
     //velocity variable for x and y to determine speed and direction
-    private double vy = 400.0;
+    private double vy = 200.0;
     private double vx = -150.0;
 
     public Ball(Rect rect, Rect leftPaddle, Rect rightPaddle) {

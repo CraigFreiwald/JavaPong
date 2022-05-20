@@ -9,6 +9,7 @@ public class Window extends JFrame implements Runnable {
     public KL keyListener = new KL();
     public Rect playerOne, ai, ballRect;
     public PlayerController playerController;
+    public AIController aiController;
     public Ball ball;
 
 
@@ -25,11 +26,13 @@ public class Window extends JFrame implements Runnable {
 
         playerOne = new Rect(Constants.HZ_PADDING, 40, Constants.PADDLE_WIDTH,Constants.PADDLE_HEIGHT, Constants.PADDLE_COLOR);
         playerController = new PlayerController(playerOne, keyListener);
-        ai = new Rect(Constants.SCREEN_WIDTH - Constants.PADDLE_WIDTH - Constants.HZ_PADDING, 40, Constants.PADDLE_WIDTH,Constants.PADDLE_HEIGHT,Constants.PADDLE_COLOR);
+
         ballRect = new Rect(Constants.SCREEN_WIDTH / 2, Constants.SCREEN_HEIGHT / 2, Constants.BALL_WIDTH, 20, Constants.PADDLE_COLOR);
         ball = new Ball(ballRect, playerOne, ai);
 
-        //aiController = new AIController(new PlayerController(ai), ballRect);
+        ai = new Rect(Constants.SCREEN_WIDTH - Constants.PADDLE_WIDTH - Constants.HZ_PADDING, 40, Constants.PADDLE_WIDTH,Constants.PADDLE_HEIGHT,Constants.PADDLE_COLOR);
+        aiController = new AIController(new PlayerController(ai), ballRect);
+
     }
 
     //the purpose of this is to update the game window with the proper background
@@ -39,12 +42,9 @@ public class Window extends JFrame implements Runnable {
         this.draw(dbg);
         g2.drawImage(dbImage, 0,0,this);
 
-
         playerController.update(dt);
-        //aiController.update(dt);
+        aiController.update(dt);
         ball.update(dt);
-
-
     }
 
     public void draw(Graphics g) {
