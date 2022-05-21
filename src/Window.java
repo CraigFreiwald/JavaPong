@@ -27,10 +27,9 @@ public class Window extends JFrame implements Runnable {
         playerOne = new Rect(Constants.HZ_PADDING, 40, Constants.PADDLE_WIDTH,Constants.PADDLE_HEIGHT, Constants.PADDLE_COLOR);
         playerController = new PlayerController(playerOne, keyListener);
 
-        ballRect = new Rect(Constants.SCREEN_WIDTH / 2, Constants.SCREEN_HEIGHT / 2, Constants.BALL_WIDTH, 20, Constants.PADDLE_COLOR);
-        ball = new Ball(ballRect, playerOne, ai);
-
+        ballRect = new Rect(Constants.SCREEN_WIDTH / 2.0, Constants.SCREEN_HEIGHT / 2.0, Constants.BALL_WIDTH, 20, Constants.PADDLE_COLOR);
         ai = new Rect(Constants.SCREEN_WIDTH - Constants.PADDLE_WIDTH - Constants.HZ_PADDING, 40, Constants.PADDLE_WIDTH,Constants.PADDLE_HEIGHT,Constants.PADDLE_COLOR);
+        ball = new Ball(ballRect, playerOne, ai);
         aiController = new AIController(new PlayerController(ai), ballRect);
 
     }

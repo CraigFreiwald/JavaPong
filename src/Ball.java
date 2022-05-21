@@ -17,25 +17,24 @@ public class Ball {
     public void update(double dt) {
 
         //controls paddle hit box
-        if (vx < 0) {
-            if (this.rect.x <= this.leftPaddle.x + this.leftPaddle.width && this.rect.x >= this.leftPaddle.x &&
+        if (vx < 0.0) {
+            if (this.rect.x <= this.leftPaddle.x + this.leftPaddle.width && this.rect.x + this.rect.width >= this.leftPaddle.x &&
                 this.rect.y >= this.leftPaddle.y && this.rect.y <= this.leftPaddle.y +
                 this.leftPaddle.height) {
-                this.vx *= -1;
-                this.vy *= -1;
+                this.vx *= -1.0;
+                this.vy *= -1.0;
             } else if (this.rect.x + this.rect.width < this.leftPaddle.x + this.leftPaddle.width) {
                 System.out.println("Player 1 lost a point!");
             }
-        }else if (vx > 0) {
+        }else if (vx > 0.0)
             if (this.rect.x + this.rect.width >= this.rightPaddle.x && this.rect.x <= this.rightPaddle.x +
-                this.rightPaddle.width && this.rect.y >= this.rightPaddle.y && this.rect.y <= this.rightPaddle.y +
-                this.rightPaddle.height) {
-                this.vx *= -1;
-                this.vy *= -1;
+                    this.rightPaddle.width && this.rect.y >= this.rightPaddle.y && this.rect.y <= this.rightPaddle.y +
+                    this.rightPaddle.height) {
+                this.vx *= -1.0;
+                this.vy *= -1.0;
             } else if (this.rect.x + this.rect.width > this.rightPaddle.x + this.rightPaddle.width) {
                 System.out.println("AI has lost a point!");
             }
-        }
 
         //controls ball deflection off of top and bottom of screen
         if (vy > 0) {

@@ -20,11 +20,11 @@ public class PlayerController {
     //moves the players paddle up and down with boundaries check for game window
     public void update(double dt) {
         if (keyListener != null) {
-        if (keyListener.isKeyPressed(KeyEvent.VK_DOWN)) {
-            moveDown(dt);
-        } else if (keyListener.isKeyPressed(KeyEvent.VK_UP)) {
-            moveUp(dt);
-            }
+            if (keyListener.isKeyPressed(KeyEvent.VK_DOWN)) {
+                moveDown(dt);
+            } else if (keyListener.isKeyPressed(KeyEvent.VK_UP)) {
+                moveUp(dt);
+                }
         }
     }
 
