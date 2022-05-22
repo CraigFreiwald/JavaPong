@@ -15,4 +15,5 @@ public class Constants {
     public static double INSETS_BOTTOM;
     public static double PADDLE_SPEED = 250;
 
+
 }//end of class

@@ -17,7 +17,7 @@ public class Ball {
     public void update(double dt) {
 
         //controls paddle hit box
-        if (vx < 0.0) {
+        if (vx <= 0.0) {
             if (this.rect.x <= this.leftPaddle.x + this.leftPaddle.width && this.rect.x + this.rect.width >= this.leftPaddle.x &&
                 this.rect.y >= this.leftPaddle.y && this.rect.y <= this.leftPaddle.y +
                 this.leftPaddle.height) {
@@ -26,7 +26,7 @@ public class Ball {
             } else if (this.rect.x + this.rect.width < this.leftPaddle.x + this.leftPaddle.width) {
                 System.out.println("Player 1 lost a point!");
             }
-        }else if (vx > 0.0)
+        }else if (vx >= 0.0)
             if (this.rect.x + this.rect.width >= this.rightPaddle.x && this.rect.x <= this.rightPaddle.x +
                     this.rightPaddle.width && this.rect.y >= this.rightPaddle.y && this.rect.y <= this.rightPaddle.y +
                     this.rightPaddle.height) {
