@@ -9,6 +9,5 @@ This project is buiilt using Java Maven, utilizing standard OOP principles, Java
 **To run**
 
   
-Go to the folder under bin. Also make sure you have Java installed and JAVA_HOME set in your environment variables. 
+Download and run "java main.Main" from an IDE. Also, make sure you have Java installed and JAVA_HOME set in your environment variables. 
 
-Then run: java main.Main
