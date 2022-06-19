@@ -7,10 +7,11 @@ This project is buiilt using Java Maven, utilizing standard OOP principles, Java
 
 ## **Gameplay**
 
-
+![javaPong_ss](https://user-images.githubusercontent.com/98433413/174503394-558631a3-d888-4268-8f2b-dc4a6ae1a598.PNG)
 
 ##   **To run**
 
   
 Clone project and run "java main.Main" from an IDE. Make sure you have Java installed and JAVA_HOME set in your environment variables. 
+
 
